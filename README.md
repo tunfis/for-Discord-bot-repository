@@ -19,10 +19,11 @@
 
 ## セットアップ
 
-1. リポジトリをクローン
-2. `npm install`
-3. `.env.example`を参考に`.env`を作成
-4. `node module.js`で起動
+1. [Node.js](https://nodejs.org/)をインストール
+2. リポジトリをクローン
+3. `npm install`
+4. `.env.example`を参考に`.env`を作成
+5. `node module.js`で起動
 
 ## 環境変数
 
