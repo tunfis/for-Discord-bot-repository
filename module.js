@@ -137,10 +137,10 @@ client.on(Events.MessageCreate, message => {
         resultText
       );
 
-	} else if (roll) {
+		} else if (roll) {
 		const dice_count = parseInt(roll[1]);
 		const dice_face = parseInt(roll[2]);
-		
+
 		if (dice_count <= 0 || dice_face <= 0) {
 		message.channel.send("値が不正です。例: `2d6`");
 		return;
@@ -151,11 +151,12 @@ client.on(Events.MessageCreate, message => {
       dices.push(Math.floor(Math.random() * dice_face) + 1);
       }
     
-      const total = dices.reduce((sum, d) => sum + d, 0);
-      message.channel.send(
-        `🎲 **ダイスロール**\n` +
-        `${roll[1]}D${roll[2]} → [${dices.join(", ")}] = **${total}**`);
-    }
+		const total = dices.reduce((sum, d) => sum + d, 0);
+		message.channel.send(
+		`🎲 **ダイスロール**\n` +
+		`${roll[1]}D${roll[2]} → [${dices.join(", ")}] = **${total}**`);	
+	
+	}
 
     if (message.content.match("ぬるぽ")) {
       message.channel.send("ガッ");
