@@ -137,14 +137,14 @@ client.on(Events.MessageCreate, message => {
         resultText
       );
 
-    } else if (roll) {
-      const dice_count = parseInt(roll[1]);
-      const dice_face = parseInt(roll[2]);
-
-      if (dice_count <= 0 || dice_face <= 0) {
-      message.channel.send("値が不正です。例: `2d6`");
-      return;
-      }
+	} else if (roll) {
+		const dice_count = parseInt(roll[1]);
+		const dice_face = parseInt(roll[2]);
+		
+		if (dice_count <= 0 || dice_face <= 0) {
+		message.channel.send("値が不正です。例: `2d6`");
+		return;
+		}
 
       const dices = [];
       for (let i = 0; i < dice_count; i++) {
